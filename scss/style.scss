@@ -1,0 +1,64 @@
+// google fonts e variaveis
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;700&family=Roboto:wght@100&family=Varela+Round&display=swap');
+
+// font-family: 'Varela Round', sans-serif;para titulos "h1"    
+// font-family: 'Quicksand', sans-serif;   para subtitulos "h3"     
+// font-family: 'Roboto', sans-serif;      para paragrafos "p"
+
+
+@font-face {
+        font-family: 'DESIGNER';
+        src: url('../assets/fonts/designer/') format(opentype) ;
+}
+
+.header-page{
+        width: 100%;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        background-color: aliceblue;
+
+
+                h1{
+                        font-size: 2rem;
+                        margin: 1rem;
+                        font-family: DESIGNER;
+                }
+
+                li{
+                        list-style: none;
+                        display: inline;
+                }
+
+                a{
+                        text-decoration: none;
+                        margin: .8rem;
+                        color: black;
+                        transition: .6s;
+                        position: relative;
+                        font-family: Varela Round;
+                        &:before{
+                                content: "";
+                                position: absolute;
+                                width: 100%;
+                                height: 3px;
+                                bottom: 0;
+                                left: 0;
+                                background-color: #398a32;
+                                visibility: hidden;
+                                -webkit-transform: scaleX(0);
+                                transform: scaleX(0);
+                                -webkit-transition: all 0.3s ease-in-out 0s;
+                                transition: all 0.3s ease-in-out 0s; 
+                        }
+                        &:hover::before{
+                                visibility: visible;
+                                bottom: -5px;
+                                -webkit-transform: scaleX(1);
+                                transform: scaleX(1);
+                        }
+                }
+}
