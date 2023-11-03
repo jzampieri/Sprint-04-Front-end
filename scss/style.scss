@@ -12,6 +12,13 @@
         src: url('../assets/fonts/designer/') format(opentype) ;
 }
 
+html{
+        scroll-behavior: smooth;
+}
+
+.decoration-span{
+        color: #ef8d4b;
+}
 
 .header-page{
         width: 100%;
@@ -21,10 +28,10 @@
         align-items: center;
         text-align: center;
         justify-content: space-around;
+        grid-area: header;
         
         h1{
                 font-size: 2rem;
-                margin: 2rem;
                 font-family: DESIGNER;
         }
         
@@ -41,16 +48,128 @@
                 padding: 10px;
                 height: 2.8rem;
                 width: 6rem;
-        }
-        
+        }   
 }
 
-body{
-        background: radial-gradient(circle,rgba(75, 173, 239, 0.23) 0,hsla(0,0%,100%,0) 59%),radial-gradient(circle,rgba(54, 7, 224, 0.232) 0,hsla(0,0%,100%,0) 50%);
+.main-page{
+        background: radial-gradient(circle,rgba(54, 113, 239, 0.233) 0,hsla(0,0%,100%,0) 59%),radial-gradient(circle,rgba(54, 3, 224, 0.232) 0,hsla(0,0%,100%,0) 40%);
         background-position-x: -40vw,40vw;
-        background-position-y: 0,-15vh;
+        background-position-y: -30vh,-65vh;
         background-repeat: no-repeat;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+        margin: auto;
+        grid-template-rows: 5rem 1fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "container container container-image"
+        "box box box"
+        "box-1 box-1 box-1"
+        ;
 }
+
+.box-my{
+        width: 100%;
+        justify-content: center;
+        grid-area: box;
+        display: flex;   
+}
+
+.box-2{
+        width: 100%;
+        justify-content: center;
+        grid-area: box-1;
+        display: flex; 
+}
+
+.card-1{
+        background-color: #f2f5f8;
+        box-sizing: border-box;
+        border-radius: 3rem;
+        margin: 1rem;
+        width: 40%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        line-height: 2.5rem;
+
+        h1{
+                font-family: 'Varela Round';
+                font-size: 1.8rem;
+        }
+
+        h3{
+                font-size: 1.2rem;
+                color: #8a8a8a;
+        }
+
+        p{
+                font-family: QuickSand;
+                font-weight: 600;
+                color: rgb(53, 53, 53);
+        }
+}
+
+.card-2{
+        box-sizing: border-box;
+        background-color: #aa78df;
+        border-radius: 3rem;
+        margin: 1rem;
+        width: 40%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1{
+                font-size: 2.3rem;
+                font-family: 'Varela Round';
+        }
+}
+
+.card-3{
+        box-sizing: border-box;
+        background-color: #f2f5f8;
+        border-radius: 3rem;
+        margin: 1rem;
+        width: 82%;
+        height: 25vh;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .icons{
+                i{
+                        font-size: 2rem;
+                        margin: 10px;
+                }
+        }
+
+        h1{
+                font-size: 2.3rem;
+                font-family: 'Varela Round';
+        }
+
+        p{
+                font-family: QuickSand;
+                font-weight: 700;
+        }
+}
+       
+
+.container-image{
+        grid-area: container-image;
+        justify-content: center;
+        align-self: center;
+}
+
+
 
 .menu-link{
         a{
@@ -97,18 +216,26 @@ body{
         }
 }
 
-.container{
-        width: 95%;
-        min-height: 120vmin;
-        display: grid;
-        grid-template-columns: repeat(3,1fr);
+.container-main{
+        flex-direction: column;
+        align-items: center;
+        height: 60vh;
+        width: 100%;
+        grid-area: container;
+        display: flex;
         gap: 5px;
-        margin: auto;
-        grid-template-areas: 
-        ""
-        ""
-        ""
-        "";
+        text-align: center;
+        justify-content: center;
+
+        h1{
+                font-family: DESIGNER;
+                font-size: 6rem;
+        }
+
+        h3{
+                font-family: QuickSand;
+        }
+
 }
 .menu-animation{
         box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);

@@ -11,3 +11,4 @@ $(window).scroll(function () {
 
     lastScroll = scroll;
 });
+
