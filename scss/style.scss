@@ -6,7 +6,6 @@
 // font-family: 'Quicksand', sans-serif;   para subtitulos "h3"     
 // font-family: 'Roboto', sans-serif;      para paragrafos "p"
 
-
 @font-face {
         font-family: 'DESIGNER';
         src: url('../assets/fonts/designer/') format(opentype) ;
@@ -56,9 +55,9 @@ html{
 }
 
 .main-page{
-        background: radial-gradient(circle,rgba(54, 113, 239, 0.233) 0,hsla(0,0%,100%,0) 59%),radial-gradient(circle,rgba(54, 3, 224, 0.232) 0,hsla(0,0%,100%,0) 40%);
+        background: radial-gradient(circle,rgba(54, 113, 239, 0.233) 0,hsla(0,0%,100%,0) 39%),radial-gradient(circle,rgba(54, 3, 224, 0.232) 0,hsla(0,0%,100%,0) 30%);
         background-position-x: -40vw,40vw;
-        background-position-y: -50vh,-65vh;
+        background-position-y: -70vh,-85vh;
         background-repeat: no-repeat;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -70,6 +69,7 @@ html{
         "box-1 box-1 box-1"
         "box-2 box-2 box-2"
         "box-3 box-3 box-3"
+        "box-4 box-4 box-4"
         ;
 }
 
@@ -86,6 +86,7 @@ html{
         justify-content: center;
         grid-area: box-1;
         display: flex; 
+        margin: 2rem 0 2rem 0;
 }
 
 .box-3{
@@ -98,11 +99,27 @@ html{
 
 .box-4{
         width: 100%;
+        margin-top: 4rem;
         justify-content: center;
         grid-area: box-3;
         display: flex;
         background-color: rgb(88, 192, 149);
+
+        img{
+                width: 50%;
+        }
 }
+
+.box-5{
+        width: 100%;
+        margin-top: 3rem;
+        justify-content: center;
+        grid-area: box-4;
+        display: flex;
+        gap: 1rem;
+
+}
+
 
 .card{
         width: 40%;
@@ -175,6 +192,9 @@ html{
         color:#aa78df;
 }
 
+.decoration-span4{
+        color: #2e78f6;
+}
 .card-3{
         box-sizing: border-box;
         background-color: #f2f5f8;
@@ -240,17 +260,24 @@ html{
 }
 
 .card-5{
+        background-color: #2e78f6;
+        border-radius: 2rem;
         height: 50vh;
-        margin: 1rem;
-        width: 100%;
+        width: 40%;
         display:flex;
         flex-direction: column;
         justify-content: center;
-        align-items: start;
-        text-align: center; 
+        text-align: center;  
+        
+        h1{
+                font-size: 2.3rem;
+                font-family: 'Varela Round';
+        }
+        
+        img{
+                width: 80%;
+        }
 }
-       
-
 
 .menu-link{
         a{
