@@ -5,7 +5,7 @@ $(window).scroll(function () {
 
     if (scroll > lastScroll) {
         $('.header-page').addClass('menu-animation');
-    } if (scroll < 1) {
+    } else if (scroll < 1) {
         $('.header-page').removeClass('menu-animation');
     }
 
